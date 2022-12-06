@@ -69,29 +69,30 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Welcome back, ADD Paragraphs here . visualss to be inside each person's page</b></p>
+                    <p class="text-white mt-5 mb-5"><b style="font-size:larger;">Student Performance Charts - Allan</b></p>
                 </div>
             </div>
             <!-- row -->
             <div class="row tm-content-row">
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="lineChart"></canvas>
+                        <h2 class="tm-block-title">Area Chart</h2>
+                        <!-- Create a div where the area graph will take place -->
+                        <div id="my_areagraph"></div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Performance</h2>
-                        <canvas id="barChart"></canvas>
+                        <h2 class="tm-block-title">Bar Chart</h2>
+                        <!-- Create a div where the bar graph will take place -->
+                        <div id="my_bargraph"></div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
-                    <div class="tm-bg-primary-dark tm-block tm-block-taller">
-                        <h2 class="tm-block-title">Storage Information</h2>
-                        <div id="pieChartContainer">
-                            <canvas id="pieChart" class="chartjs-render-monitor" width="200" height="200"></canvas>
-                        </div>                        
+                    <div class="tm-bg-primary-dark tm-block">
+                        <h2 class="tm-block-title">Line Chart</h2>
+                        <!-- Create a div where the line graph will take place -->
+                        <div id="my_linegraph"></div>
                     </div>
                 </div>
             </div>
@@ -114,30 +115,174 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script src="js/tooplate-scripts.js"></script>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script>
-        Chart.defaults.global.defaultFontColor = 'white';
-        let ctxLine,
-            ctxBar,
-            ctxPie,
-            optionsLine,
-            optionsBar,
-            optionsPie,
-            configLine,
-            configBar,
-            configPie,
-            lineChart;
-        barChart, pieChart;
-        // DOM is ready
-        $(function () {
-            drawLineChart(); // Line Chart
-            drawBarChart(); // Bar Chart
-            drawPieChart(); // Pie Chart
+        function drawAreaChart() {
+            // set the dimensions and margins of the graph
+            var margin = {top: 10, right: 30, bottom: 30, left: 50},
+                width = 460 - margin.left - margin.right,
+                height = 350 - margin.top - margin.bottom;
 
-            $(window).resize(function () {
-                updateLineChart();
-                updateBarChart();                
-            });
-        })
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_areagraph")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            //Read the data
+            d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+
+            // When reading the csv, I must format variables:
+            function(d){
+                return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+            },
+
+            // Now I can use this dataset:
+            function(data) {
+
+                // Add X axis --> it is a date format
+                var x = d3.scaleTime()
+                .domain(d3.extent(data, function(d) { return d.date; }))
+                .range([ 0, width ]);
+                svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+                // Add Y axis
+                var y = d3.scaleLinear()
+                .domain([0, d3.max(data, function(d) { return +d.value; })])
+                .range([ height, 0 ]);
+                svg.append("g")
+                .call(d3.axisLeft(y));
+
+                // Add the area
+                svg.append("path")
+                .datum(data)
+                .attr("fill", "#cce5df")
+                .attr("stroke", "#69b3a2")
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.area()
+                    .x(function(d) { return x(d.date) })
+                    .y0(y(0))
+                    .y1(function(d) { return y(d.value) })
+                    )
+
+            })
+        }
+
+        function drawBarChart() {
+            // set the dimensions and margins of the graph
+            var margin = {top: 30, right: 30, bottom: 70, left: 60},
+                width = 460 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_bargraph")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            // Parse the Data
+            d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+
+            // X axis
+            var x = d3.scaleBand()
+            .range([ 0, width ])
+            .domain(data.map(function(d) { return d.Country; }))
+            .padding(0.2);
+            svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+                .attr("transform", "translate(-10,0)rotate(-45)")
+                .style("text-anchor", "end");
+
+            // Add Y axis
+            var y = d3.scaleLinear()
+            .domain([0, 13000])
+            .range([ height, 0]);
+            svg.append("g")
+            .call(d3.axisLeft(y));
+
+            // Bars
+            svg.selectAll("mybar")
+            .data(data)
+            .enter()
+            .append("rect")
+                .attr("x", function(d) { return x(d.Country); })
+                .attr("y", function(d) { return y(d.Value); })
+                .attr("width", x.bandwidth())
+                .attr("height", function(d) { return height - y(d.Value); })
+                .attr("fill", "#69b3a2")
+
+            })
+        }
+
+        function drawLineChart() {
+            // set the dimensions and margins of the graph
+            var margin = {top: 10, right: 30, bottom: 30, left: 60},
+                width = 460 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_linegraph")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            //Read the data
+            d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+
+            // When reading the csv, I must format variables:
+            function(d){
+                return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+            },
+
+            // Now I can use this dataset:
+            function(data) {
+
+                // Add X axis --> it is a date format
+                var x = d3.scaleTime()
+                .domain(d3.extent(data, function(d) { return d.date; }))
+                .range([ 0, width ]);
+                svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+                // Add Y axis
+                var y = d3.scaleLinear()
+                .domain([0, d3.max(data, function(d) { return +d.value; })])
+                .range([ height, 0 ]);
+                svg.append("g")
+                .call(d3.axisLeft(y));
+
+                // Add the line
+                svg.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x(function(d) { return x(d.date) })
+                    .y(function(d) { return y(d.value) })
+                    )
+
+            })
+        }
+
+        drawAreaChart();
+        drawBarChart();
+        drawLineChart();
     </script>
 </body>
 
