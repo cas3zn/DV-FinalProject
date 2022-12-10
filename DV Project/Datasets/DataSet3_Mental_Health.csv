@@ -1,0 +1,102 @@
+Gender,Age,What is your course?,Your current year of Study,What is your CGPA?,Marital status,Do you have Depression?,Do you have Anxiety?,Do you have Panic attack?,Did you seek any specialist for a treatment?
+F,18,Engineering,Y1,3.00 - 3.49,No,Yes,No,Yes,No
+M,21,Islamic education,Y2,3.00 - 3.49,No,No,Yes,No,No
+M,19,BIT,Y1,3.00 - 3.49,No,Yes,Yes,Yes,No
+F,22,Laws,Y3,3.00 - 3.49,Yes,Yes,No,No,No
+M,23,Mathematics,Y4,3.00 - 3.49,No,No,No,No,No
+M,19,Engineering,Y2,3.50 - 4.00,No,No,No,Yes,No
+F,23,Pendidikan Islam,Y2,3.50 - 4.00 ,Yes,Yes,No,Yes,No
+F,18,BCS,Y1,3.50 - 4.00,No,No,Yes,No,No
+F,19,Human Resources,Y2,2.50 - 2.99,No,No,No,No,No
+M,18,Irkhs,Y1,3.50 - 4.00,No,No,Yes,Yes,No
+F,20,Psychology,Y1,3.50 - 4.00,No,No,No,No,No
+F,24,Engineering,Y3,3.50 - 4.00,Yes,Yes,No,No,No
+F,18,BCS,Y1,3.00 - 3.49,No,Yes,No,No,No
+M,19,Engineering,Y1,3.00 - 3.49,No,No,No,No,No
+F,18,KENMS,Y2,3.50 - 4.00,No,No,Yes,No,No
+M,24,BCS,Y3,3.50 - 4.00,No,No,No,No,No
+F,24,Accounting ,Y3,3.00 - 3.49,No,No,No,No,No
+F,24,ENM,Y4,3.00 - 3.49,Yes,Yes,Yes,Yes,No
+F,20,BIT,Y2,3.50 - 4.00,No,No,Yes,No,No
+F,18,Marine science,Y2,3.50 - 4.00,Yes,Yes,Yes,Yes,No
+F,19,Engineering,Y1,3.00 - 3.49,No,No,No,Yes,No
+F,18,KOE,Y2,3.00 - 3.49,No,No,No,No,No
+F,24,BCS,Y1,3.50 - 4.00,No,No,No,No,No
+F,24,Engineering,Y1,3.00 - 3.49,No,No,No,No,No
+F,23,BCS,Y3,3.50 - 4.00,No,Yes,Yes,Yes,No
+F,18,Banking Studies,Y1,3.50 - 4.00,No,No,No,No,No
+F,19,Engineering,Y1,3.50 - 4.00,No,No,No,No,No
+M,18,Engineering,Y2,3.00 - 3.49,Yes,Yes,Yes,No,No
+F,24,BIT,Y3,3.50 - 4.00,Yes,Yes,Yes,Yes,Yes
+F,24,BCS,Y4,3.50 - 4.00,No,No,No,No,No
+F,23,Business Administration,Y2,3.00 - 3.49,No,No,No,No,No
+M,18,BCS,Y2,3.00 - 3.49,No,No,No,No,No
+M,19,BCS,Y1,3.50 - 4.00,No,No,No,Yes,No
+M,18,BCS,Y2,3.50 - 4.00,Yes,Yes,Yes,No,Yes
+F,19,BIT,Y1,3.00 - 3.49,No,Yes,Yes,Yes,No
+F,18,Engineering,Y1,2.00 - 2.49,No,No,No,No,No
+F,18,Law,Y3,3.00 - 3.49,No,Yes,Yes,No,No
+F,19,BIT,Y1,2.50 - 2.99,No,Yes,Yes,Yes,No
+F,18,KIRKHS,Y1,3.50 - 4.00,No,No,No,No,No
+F,24,Engineering,Y2,2.50 - 2.99,Yes,Yes,No,Yes,Yes
+F,24,BIT,Y3,3.00 - 3.49,No,No,Yes,No,No
+F,22,Engineering,Y4,3.50 - 4.00,No,No,No,No,No
+F,20,Usuluddin ,Y2,3.00 - 3.49,No,Yes,No,No,No
+M,20,BIT,Y1,0 - 1.99,No,No,No,No,No
+M,23,TAASL,Y2,3.50 - 4.00,No,No,No,Yes,No
+M,18,BCS,Y1,3.50 - 4.00,No,No,Yes,Yes,No
+F,19,Engineering,Y1,3.50 - 4.00,No,No,Yes,No,No
+F,18,Engineering,Y4,3.50 - 4.00,No,No,No,No,No
+M,24,BCS,Y2,3.00 - 3.49,No,Yes,No,No,No
+F,24,BCS,Y3,3.50 - 4.00,No,No,No,Yes,No
+F,23,ALA,Y1,2.50 - 2.99,Yes,Yes,No,Yes,Yes
+F,18,BCS,Y2,3.50 - 4.00,No,No,Yes,No,No
+F,19,Biomedical science,Y3,3.00 - 3.49,No,No,No,No,No
+F,20,koe,Y3,3.00 - 3.49,Yes,Yes,Yes,Yes,No
+F,19,BCS,Y1,3.50 - 4.00,No,Yes,No,Yes,Yes
+M,21,BCS,Y1,3.00 - 3.49,No,No,No,No,No
+M,23,Kirkhs,Y3,3.50 - 4.00,No,No,No,No,No
+F,20,BENL,Y3,3.00 - 3.49,No,Yes,Yes,No,No
+F,18,BCS,Y1,3.50 - 4.00,No,No,No,No,No
+F,23,Benl,Y1,3.00 - 3.49,No,No,No,No,No
+F,18,IT,Y3,3.00 - 3.49,No,No,No,Yes,No
+F,19,BCS,Y1,3.50 - 4.00,No,No,No,No,No
+F,18,CTS,Y1,3.50 - 4.00,No,No,No,Yes,No
+F,24,engin,Y1,3.50 - 4.00,No,No,No,Yes,No
+F,24,Engineering,Y1,3.50 - 4.00,No,No,No,No,No
+F,23,Econs,Y1,3.50 - 4.00,No,Yes,Yes,No,No
+F,18,KOE,Y3,3.00 - 3.49,No,No,Yes,No,No
+M,19,MHSC,Y3,3.00 - 3.49,Yes,Yes,No,Yes,No
+F,18,Malcom,Y1,3.50 - 4.00,No,Yes,No,No,No
+F,24,Kop,Y4,3.00 - 3.49,No,No,Yes,No,No
+F,24,Biomedical science,Y1,3.00 - 3.49,No,No,No,No,No
+F,18,Laws,Y3,3.50 - 4.00,No,No,No,Yes,No
+F,19,BIT,Y3,3.00 - 3.49,Yes,Yes,No,No,No
+M,18,Biomedical science,Y1,0 - 1.99,No,No,No,No,No
+M,24,BIT,Y3,3.50 - 4.00,No,No,Yes,No,No
+F,24,KOE,Y1,3.50 - 4.00,No,No,Yes,Yes,No
+F,23,Engineering,Y1,3.00 - 3.49,No,Yes,No,No,No
+F,18,Human Sciences ,Y2,3.00 - 3.49,No,No,No,Yes,No
+F,19,Biotechnology,Y3,0 - 1.99,No,No,No,No,No
+F,18,Engineering,Y4,3.50 - 4.00,No,No,No,No,No
+F,24,Communication ,Y2,3.50 - 4.00,Yes,Yes,Yes,Yes,No
+F,24,Diploma Nursing,Y2,3.50 - 4.00,No,No,No,No,No
+F,19,Engineering,Y1,3.00 - 3.49,No,Yes,Yes,No,No
+F,19,Pendidikan Islam ,Y2,3.00 - 3.49,No,No,No,No,No
+M,23,Radiography,Y1,3.00 - 3.49,No,No,No,No,No
+F,18,psychology,Y1,3.50 - 4.00,No,Yes,Yes,No,Yes
+F,19,Fiqh fatwa ,Y3,3.00 - 3.49,No,No,No,No,No
+F,18,psychology,Y1,3.50 - 4.00,No,Yes,Yes,Yes,No
+M,24,BIT,Y1,3.00 - 3.49,No,No,Yes,No,No
+M,24,Engineering,Y2,2.00 - 2.49,No,No,No,Yes,No
+F,23,DIPLOMA TESL,Y3,3.50 - 4.00,No,No,No,Yes,No
+M,18,Koe,Y2,3.00 - 3.49,No,No,Yes,No,No
+F,19,KOE,Y2,3.00 - 3.49,Yes,Yes,No,No,No
+F,18,BENL,Y1,3.00 - 3.49,No,Yes,No,No,No
+F,24,Fiqh,Y3,0 - 1.99,No,No,No,Yes,No
+F,18,Islamic Education,Y1,3.50 - 4.00,No,No,No,No,No
+F,21,BCS,Y1,3.50 - 4.00,No,No,Yes,No,No
+M,18,Engineering,Y2,3.00 - 3.49,No,Yes,Yes,No,No
+F,19,Nursing ,Y3,3.50 - 4.00,Yes,Yes,No,Yes,No
+F,23,Pendidikan Islam,Y4,3.50 - 4.00,No,No,No,No,No
+M,20,Biomedical science,Y2,3.00 - 3.49,No,No,No,No,No
