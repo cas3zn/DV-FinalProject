@@ -57,6 +57,18 @@ d3.csv("../DataSets/Dataset1Sliced.csv", function(data) {
     .domain(subgroups)
     .range(["#050F30", "#7eb0d5", "#B1D4E0", "#2E8BC0", "#0C2D48", "#145DA0"]);
 
+    // Add zoom on the graph
+    let zoom = d3.zoom()
+    .scaleExtent([0.8,1.2])
+    .translateExtent([[0, 0], [width - 300, height]])
+    .on('zoom', handleZoom);
+
+    function handleZoom(e) {
+        d3.select('svg').attr('transform', d3.event.transform);
+    }
+
+    svg.call(zoom);
+
     // Show the bars
     svg.append("g")
     .selectAll("g")
