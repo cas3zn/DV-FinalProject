@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/graphs.css">
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -21,77 +22,44 @@
 
 <body id="reportsPage">
     <div class="" id="home">
+        <!-- Header -->
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
+                <!-- Header Title -->
+                <a class="navbar-brand" href="allan.html">
                     <h1 class="tm-site-title mb-0">Student Performance</h1>
                 </a>
+                <!-- Responsive dropdown nav-bar -->
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars tm-nav-icon"></i>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto h-100">
+                <!-- Link back to home page -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                    <ul class="navbar-nav mr-0 ml-auto h-100">
                         <li class="nav-item">
                             <a class="nav-link active" href="../T3/index.html">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Dashboard
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="murtada.html">
-                                <i class="far fa-user"></i>
-                                Murtada
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="allan.html">
-                                <i class="far fa-user"></i>
-                                Allan
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="munaam.html">
-                                <i class="far fa-user"></i>
-                                Manamullah
-                            </a>
-                        </li>
-                        
+                        </li>                        
                     </ul>
-                    
                 </div>
             </div>
 
         </nav>
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p class="text-white mt-5 mb-5">Welcome back, ADD Paragraphs here . visualss to be inside each person's page</b></p>
-                </div>
-            </div>
-            <!-- row -->
-            <div class="row tm-content-row">
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
-                    <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Latest Hits</h2>
-                        <canvas id="lineChart"></canvas>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
-                    <div class="tm-bg-primary-dark tm-block">
-                        <h2 class="tm-block-title">Performance</h2>
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
-                    <div class="tm-bg-primary-dark tm-block tm-block-taller">
-                        <h2 class="tm-block-title">Storage Information</h2>
-                        <div id="pieChartContainer">
-                            <canvas id="pieChart" class="chartjs-render-monitor" width="200" height="200"></canvas>
-                        </div>                        
-                    </div>
+            <div class="tm-bg-primary-dark graph-container graph-one">
+                <h2 class="tm-block-title">Average Students' Subject Score and Their Parents' Education</h2>
+                <div id="allan-graph1"></div>
+                <div class="graph-description">
+                    <p>The grouped bar chart drawn above shows the average student score in a particular subject according to their parents' education.</p>
+                    <ul>
+                        <li>Students whose parents have had a formal education have the highest average score while students whose parents have had a non-formal education have the lowest average score.</li>
+                        <li>The subject with the highest average score is ASScience2 for students whose parents had a formal education with an average of 36.</li>
+                        <li>The subject with the lowest average score is ASMath1 and ASMath2 for students whose parents had a non-formal education with an average of 24.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -113,31 +81,10 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script src="js/tooplate-scripts.js"></script>
-    <script>
-        Chart.defaults.global.defaultFontColor = 'white';
-        let ctxLine,
-            ctxBar,
-            ctxPie,
-            optionsLine,
-            optionsBar,
-            optionsPie,
-            configLine,
-            configBar,
-            configPie,
-            lineChart;
-        barChart, pieChart;
-        // DOM is ready
-        $(function () {
-            drawLineChart(); // Line Chart
-            drawBarChart(); // Bar Chart
-            drawPieChart(); // Pie Chart
-
-            $(window).resize(function () {
-                updateLineChart();
-                updateBarChart();                
-            });
-        })
-    </script>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- Load subject to parent education JS file -->
+    <script src="js/subject-parent-education.js"></script>
 </body>
 
 </html>
