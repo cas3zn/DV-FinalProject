@@ -140,7 +140,7 @@
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // Parse the Data
-        d3.csv("../DataSets/Dataset1.csv", function(data) {
+        d3.csv("../DataSets/Dataset1_Sliced.csv", function(data) {
             var subgroups = data.columns;
             var groups = d3.map(data, function(d){return(d.ParEd)}).keys();
 
