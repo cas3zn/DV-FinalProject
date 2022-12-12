@@ -1,5 +1,4 @@
-MARKS ,,,,,,,,Variables,,,,
-ASReading2,ASMath2,ASScience2,ASReading1,ASMath1,ASScience1,Total ,Percentage,Gender,ParEd,Attend,HourStudy,Possible graphs
+ASReading2,ASMath2,ASScience2,ASReading1,ASMath1,ASScience1,Total,Percentage,Gender,ParEd,Attend,HourStudy,Possible graphs
 9,7,10,8,5,6,45,18.75,F,Non-Formal,8,3,Number of classes attended / exam percentage
 29,27,30,25,25,26,162,67.5,F,Formal,21,4,hours of study / exam percentage
 13,11,14,9,9,10,66,27.5,F,Non-Formal,11,3,hours of study / marks (gender)
